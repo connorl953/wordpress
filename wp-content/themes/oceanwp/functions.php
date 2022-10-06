@@ -344,7 +344,7 @@ final class OCEANWP_Theme_Class {
 	 */
 	public function process_contribute_form($args){
 
-        require_once(__DIR__.'/vendor/autoload.php');
+        require_once( __DIR__ . '/../../vendor/autoload.php');
         $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
         $dotenv->load();
 
