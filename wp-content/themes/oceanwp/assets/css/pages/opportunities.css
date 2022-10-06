@@ -1,0 +1,83 @@
+.post-type-archive-opportunities .archive-listing .container .row .col.filters {
+    width: auto;
+    float: right;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .col.browse {
+    width: auto;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .col.browse ul li {
+    margin: 0 14px 0 0;
+    font-size: 13px;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .col.browse ul li:before {
+    display: inline-block;
+    margin: 2px 2px 0 0;
+    width: 10px;
+    height: 10px;
+    background: #48cdff;
+    content: '';
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .col.browse ul li:after {
+    content: none
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .col.filters ul li:before {
+    color: #48cdff;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .col.filters ul li ul li input[type="checkbox"] {
+    border-color: #48cdff;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .col.banner {
+    text-align: center;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .col.banner strong {
+    display: block;
+    margin: 10px 0 20px 0;
+    font-weight: normal;
+    font-size: 30px;
+    color: #548194;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .result .heading span:before {
+    background: #48cdff;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .result .heading {
+    border-bottom: 2px solid #48cdff;
+}
+
+.archive-listing .container .row .result .bubble {
+    display: table;
+    margin: 0 0 20px 0;
+    width: 150px;
+    height: 150px;
+    background: url('./../../../img/bg-bubble-opportunities.png') no-repeat center center;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .result .bubble div {
+    color: #FFF;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .result .bubble div small {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .col.filters ul li ul {
+    width: 240px;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .col.filters ul li ul li {
+    font-size: 13px;
+}

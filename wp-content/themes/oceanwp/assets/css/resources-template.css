@@ -1,0 +1,241 @@
+.archive-listing {
+    padding: 0 0 20px 0;
+    width: 100%;
+}
+
+.archive-listing .listing-content {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.archive-listing .listing-content form {
+    text-align: left;
+}
+
+.archive-listing .container {
+    max-width: 1200px;
+    width: 100%;
+}
+
+.archive-listing .container .row .col img {
+    width: 100%;
+}
+
+.archive-listing .container .row .col.filters,
+.archive-listing .container .row .col.browse {
+    float: left;
+}
+
+.archive-listing .container .row .col.filters,
+.archive-listing .container .row .col.browse {
+    margin-top: 40px;
+    text-align: right;
+}
+
+.archive-listing .container .row .col.filters strong,
+.archive-listing .container .row .col.browse strong {
+    padding: 0 10px 0 0;
+    font-size: 20px;
+    color: #548194;
+    border-right: 4px solid #548194;
+}
+
+.archive-listing .container .row .col.filters {
+    width: auto;
+    float: right;
+}
+
+.archive-listing .container .row .col.filters ul {
+    list-style-type: none;
+}
+
+.archive-listing .container .row .col.filters ul li {
+    display: inline-block;
+    position: relative;
+    padding: 6px;
+    margin: 0 0 0 32px;
+    font-weight: 400;
+    font-size: 16px;
+    color: #548194;
+}
+
+.archive-listing .container .row .col.filters ul li:before {
+    margin: 0 5px 0 0;
+    color: #f1e913;
+    content: '>>';
+}
+
+.archive-listing .container .row .col.filters ul li ul {
+    display: none;
+    position: absolute;
+    right: 0;
+    width: 140px;
+    background: #FFF;
+    z-index: 2
+}
+
+.archive-listing .container .row .col.filters ul li ul li {
+    display: block;
+    padding: 2px 4px 2px 4px;
+    margin: 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+.archive-listing .container .row .col.filters ul li ul li:before {
+    content: none;
+}
+
+.archive-listing .container .row .col.filters ul li ul li input[type="checkbox"] {
+    margin: 0px 5px 0 0 !important;
+    border-color: #f1e913;
+}
+
+.archive-listing .container .row .col.filters ul li ul.large {
+    width: 220px;
+}
+
+.archive-listing .container .row .col.filters ul li:hover {
+    background: #FFF
+}
+
+.archive-listing .container .row .col.filters ul li:hover ul {
+    display: block
+}
+
+.archive-listing .container .row .col.filters p span {
+    color: #548194;
+}
+
+.archive-listing .container .row .col.browse {
+    text-align: left;
+}
+
+.archive-listing .container .row .col.browse strong {
+    padding: 0 0 0 10px;
+    border-left: 4px solid #548194;
+    border-right: none;
+}
+
+.archive-listing .container .row .col.browse ul {
+    margin: 15px 0 0 0;
+    padding: 0;
+    list-style-type: none
+}
+
+.archive-listing .container .row .col.browse ul li {
+    margin: 0 14px 0 0;
+    float: left;
+}
+
+.archive-listing .container .row .col.browse ul li:before {
+    display: inline-block;
+    margin: 2px 2px 0 0;
+    width: 10px;
+    height: 10px;
+    background: #f1e913;
+    content: '';
+}
+
+.archive-listing .container .row .result {
+    display: inline-block;
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+
+.archive-listing .container .row .result .heading {
+    margin: 0 0 15px 0;
+    padding: 0 0 6px 0;
+    width: 100%;
+    border-bottom: 2px solid #f1e913;
+}
+
+.archive-listing .container .row .result .heading span {
+    color: #548194;
+    font-size: 22px;
+}
+
+.archive-listing .container .row .result .heading span:before {
+    display: inline-block;
+    margin: 0 6px 0 0;
+    width: 20px;
+    height: 20px;
+    background: #f1e913;
+    content: '';
+}
+
+.archive-listing .container .row .result .heading b {
+    font-size: 20px;
+    color: #48cdff;
+    float: right;
+}
+
+.archive-listing .container .row .result .heading b a {
+    font-weight: bold
+}
+
+.archive-listing .container .row .result .bubble div {
+    position: relative;
+    display: table-cell;
+    padding: 0 14px 0 14px;
+    font-size: 15px;
+    vertical-align: middle;
+    color: #548194;
+    text-align: center;
+}
+
+.archive-listing .container .row .result .bubble div a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.archive-listing .container .row .result .bubble div:hover strong {
+    color: #548194;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .result .bubble div:hover strong,
+.post-type-archive-funding .archive-listing .container .row .result .bubble div:hover strong {
+    color: #666666;
+}
+
+.archive-listing .container .row .result .bubble div strong {
+    display: block;
+    line-height: 20px;
+}
+
+.archive-listing .container .row .result .bubble div:hover strong {
+    color: #13aff0;
+}
+
+.archive-listing .container .row .result .bubble div small {
+    display: block
+}
+
+.archive-listing .container .row .result .column {
+    display: inline-block;
+    margin: 0 5px 0 0;
+    width: 150px;
+    float: left;
+}
+
+.archive-listing .container .row .result .column.padding {
+    padding-top: 75px
+}
+
+.archive-listing .container .row .result .bubble div img {
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    margin: 0 0 0 -27.5px;
+    width: 100%;
+    max-width: 55px;
+}
+
+.archive-listing .container .row .result .bubble div img.icon-2 {
+    top: 14px;
+}

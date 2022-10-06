@@ -1,0 +1,63 @@
+.post-type-archive-funding .archive-listing .container .row .result .bubble div {
+    color: #FFF;
+}
+
+.post-type-archive-funding .archive-listing .container .row .col.banner strong {
+    line-height: 40px;
+    display: block;
+    margin: 10px 0 20px 0;
+    font-weight: normal;
+    font-size: 30px;
+    color: #548194;
+}
+
+.post-type-archive-funding .archive-listing .container .row .col.banner strong a {
+    display: inline-block;
+    margin: 0 0 0 10px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    background: url('./../../../img/bg-icon-funding-plus.png') no-repeat center center/contain;
+    content: '';
+}
+
+.post-type-archive-funding .archive-listing .container .row .col.banner {
+    text-align: center;
+}
+
+.archive-listing .container .row .result .bubble {
+    display: table;
+    margin: 0 0 20px 0;
+    width: 150px;
+    height: 150px;
+    background: url('./../../../img/bg-bubble-funding.png') no-repeat center center;
+}
+
+.post-type-archive-funding .archive-listing .container .row .col.browse ul li:before {
+    background: #94c426;
+}
+
+.post-type-archive-funding .archive-listing .container .row .col.filters ul li:before {
+    color: #94c426;
+}
+
+.post-type-archive-funding .archive-listing .container .row .col.filters ul li ul li input[type="checkbox"] {
+    border-color: #94c426;
+}
+
+.post-type-archive-funding .archive-listing .container .row .result .heading span:before {
+    background: #94c426;
+}
+
+.post-type-archive-funding .archive-listing .container .row .result .heading {
+    border-bottom: 2px solid #94c426;
+}
+
+
+.post-type-archive-funding .archive-listing .container .row .col.filters ul li ul {
+    width: 240px;
+}
+
+.post-type-archive-funding .archive-listing .container .row .col.filters ul li ul li {
+    font-size: 13px;
+}

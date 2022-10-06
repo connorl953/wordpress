@@ -1,0 +1,792 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+/*------------------------------------*
+    $CONTENTS
+ *------------------------------------*/
+/**
+ * - ROOT
+ * - UTILS
+ * - RESET RULES
+ * - HEADER
+ * - PARTNERS TABLE
+ * - TOGGLE
+ * - BASE FORM
+ * - PARTNER FORM
+ * - CHECKBOXES FORM
+ * - SPONSOR FORM
+ * - STRIPE FORM
+ * - EVENT FORM
+ * - SUBMIT
+ * - RESET MEDIA QUERY
+ */
+
+/*------------------------------------*
+	$ROOT
+ *------------------------------------*/
+:root {
+    --bg-category: #88CBFA;
+    --bg-input: #EBF4EA;
+    --font-primary: #006180;
+    --font-purple: #631C72;
+    --font-green: #008037;
+    --border-yellow: #F2EC5A;
+    --form-base: #AC8CB4;
+    --form-sponspor: #B5E4E6;
+    --form-event: #A7D6A0;
+    --form-raffle: #EDEDA8;
+    --form-error: #CB2727;
+    --toggle-green: #008037;
+    --toggle-grey: #a6a6a6;
+}
+
+/*------------------------------------*
+	$UTILS
+ *------------------------------------*/
+.col-4 {
+    width: 33.4%;
+}
+
+.col-6 {
+    width: 50%;
+}
+
+.col-8 {
+    width: 66.6%;
+}
+
+.col-12 {
+    width: 100%;
+}
+
+.error {
+    outline: 2px solid var(--form-error);
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+/*------------------------------------*
+	$RESET RULES
+ *------------------------------------*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    color: black;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*------------------------------------*
+	$HEADER
+ *------------------------------------*/
+.wrapper {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+}
+
+.hero img {
+    width: 90%;
+}
+
+/*------------------------------------*
+	$PARTNERS TABLE
+ *------------------------------------*/
+.partner-types {
+    display: flex;
+}
+
+.partner-types .left {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 5%;
+    padding-top: 10%;
+}
+
+.partners-title {
+    position: relative;
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 1.4em;
+    color: var(--font-purple);
+    padding-top: 15%;
+}
+
+.partners-title::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 165%;
+    content: '';
+    background-image: url('/wp-content/uploads/arrow_curve.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -2;
+}
+
+.partner-types .right {
+    width: 50%;
+    padding-top: 7.5%;
+}
+
+.partner-types .left .left-wrapper {
+    width: 80%;
+    margin-left: 15%;
+    padding: 0% 5%;
+}
+
+.rewards,
+.category-rewards {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rewards {
+    margin-top: 18%;
+    position: relative;
+}
+
+.rewards::after {
+    position: absolute;
+    content: '';
+    width: 7px;
+    height: 90%;
+    top: 0;
+    right: 0;
+    background-color: var(--border-yellow);
+}
+
+.reward-category {
+    display: flex;
+    flex-direction: column;
+}
+
+.reward {
+    background-color: var(--bg-category);
+    width: 76%;
+    float: left;
+    text-align: center;
+    color: var(--font-primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    margin: 1% 0 1% 9% !important;
+    padding: 4.5% 0;
+}
+
+.category-title {
+    color: var(--font-primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.partners-table {
+    margin-top: 7%;
+}
+
+.partner-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 34%;
+}
+
+tr {
+    display: flex;
+    border-collapse: collapse;
+}
+
+.partners-table td {
+    border: 2px solid;
+    border-collapse: collapse;
+}
+
+.partners-table td {
+    width: 34%;
+    position: relative;
+    padding: 4% 0;
+}
+
+.partner-icons {
+    margin-bottom: 2.5%;
+}
+
+tr.has-title {
+    margin-top: 4%;
+    margin-bottom: 1%;
+}
+
+.sponsor-check::after {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: '\f058';
+    font: normal normal normal 30px/1 FontAwesome;
+    color: var(--font-green);
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.event-check::before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: '\f058';
+    font: normal normal normal 30px/1 FontAwesome;
+    border: 2px solid var(--font-green);
+    background-color: var(--font-green);
+    color: white;
+    border-radius: 50%;
+    top: 3%;
+    left: 40%;
+    margin: 2% 0;
+}
+
+.raffle-check::after {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    content: '\f00c';
+    font: normal normal normal 26px/1 FontAwesome;
+    color: var(--font-green);
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.table-last-row,
+.table-last-row td {
+    border: none;
+}
+
+.rewards-end {
+    position: relative;
+    color: white;
+    margin-top: 13%;
+    padding-left: 20%;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-top: 1%;
+}
+
+.rewards-end::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 65%;
+    height: 100%;
+    margin-left: 10%;
+    background-color: var(--font-purple);
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    padding: 5% 0;
+}
+
+.rewards-end::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: 50px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid var(--font-purple);
+}
+
+.sponsor-icon,
+.event-icon,
+.raffle-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-icon img,
+.event-icon img {
+    width: 30%;
+}
+
+.event-icon span,
+.raffle-icon span {
+    font-weight: bold;
+    color: var(--font-purple);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.raffle-icon span {
+    position: absolute;
+}
+
+.raffle-icon::after {
+    content: '';
+    background-image: url('/wp-content/uploads/bird_and_book.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin-left: 25%;
+}
+
+/*------------------------------------*
+	$TOGGLE
+ *------------------------------------*/
+.icon-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.icon-toggle img {
+    width: 75%;
+}
+
+/* TOGGLE */
+.toggle-holder .knobs:before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 20px;
+    height: 10px;
+    color: #fff;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1;
+    padding: 9px 4px;
+    background-color: var(--toggle-grey);
+    border-radius: 50%;
+    transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.35), 0 10px 10px -5px rgba(0, 0, 0, 0.20);
+}
+
+.toggle-holder .toggle-partner:active+.knobs:before {
+    width: 46px;
+    border-radius: 100px;
+}
+
+.toggle-holder .toggle-partner:checked:active+.knobs:before {
+    margin-left: -26px;
+}
+
+.toggle-holder .toggle-partner:checked+.knobs:before {
+    content: '';
+    left: 22px;
+    background-color: var(--toggle-green);
+}
+
+.knobs,
+.layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.toggle-holder {
+    position: relative;
+    width: 50px;
+    height: 30px;
+    margin: 10px auto 0 auto;
+    overflow: hidden;
+    border: 2px solid var(--font-purple);
+}
+
+.toggle-holder,
+.toggle-holder .layer {
+    border-radius: 100px;
+}
+
+.toggle-partner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.knobs {
+    z-index: 2;
+}
+
+.layer {
+    width: 100%;
+    background-color: #d3d3d3;
+    transition: 0.3s ease all;
+    z-index: 1;
+}
+
+/*------------------------------------*
+	$BASE FORM
+ *------------------------------------*/
+.form {
+    width: 90%;
+    margin-left: 5%;
+}
+
+.base-line {
+    border: 3px solid var(--form-base);
+}
+
+.form-row {
+    width: 100%;
+    display: flex;
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    padding: 0 2%;
+}
+
+input[type=text] {
+    border: 0;
+    background-color: var(--bg-input);
+    margin: 0 20px;
+    font-size: 1.3em;
+}
+
+.form-input.col-4 input[type=text] {
+    padding: 1%;
+}
+
+input[type=text]:focus {
+    outline: var(--font-green);
+}
+
+.form-label {
+    margin: 0 20px;
+    color: var(--font-primary);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+.input-error {
+    text-align: end;
+    margin-right: 5%;
+    font-weight: bold;
+    color: var(--form-error);
+}
+
+/*------------------------------------*
+	$PARTNER FORM
+ *------------------------------------*/
+.logo {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo img {
+    width: 75%;
+    margin-left: 20%;
+}
+
+.logo-title {
+    font-size: .8em;
+}
+
+.details {
+    width: 70%;
+    font-size: 0.9em;
+    text-align: justify;
+    padding: 2% 0;
+}
+
+.note {
+    width: 100%;
+    margin: 1% 0;
+}
+
+/*------------------------------------*
+	$CHECBOXES FORM
+ *------------------------------------*/
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox-container {
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: flex;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+}
+
+.checkbox-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 7px;
+    height: 13px;
+    border: solid var(--font-purple);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.label,
+.note {
+    width: 95%;
+    margin-left: 5%;
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bg-input);
+    color: var(--font-primary);
+    font-weight: bold;
+    padding: 1% 5% 1% 1%;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.note p {
+    color: var(--font-primary);
+}
+
+.note-error, .note-error p {
+    background-color: var(--form-error);
+    color: white;
+}
+
+.note-inverse {
+    color: var(--bg-input);
+    background-color: var(--font-primary);
+}
+
+/*------------------------------------*
+	$SPONSOR FORM
+ *------------------------------------*/
+.sponsor-line {
+    border: 3px solid var(--form-sponspor);
+}
+
+.partner-header {
+    display: flex;
+}
+
+.partner-name {
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+.form-title {
+    color: var(--font-primary);
+    font-size: 1em;
+    width: 33%;
+    text-transform: uppercase;
+}
+
+.sponsor-details {
+    border: 5px solid var(--form-sponspor);
+    display: flex;
+}
+
+.sponsor-plans {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sponsor-plans li {
+    font-size: 1.2em;
+}
+/*------------------------------------*
+	$STRIPE FORM
+ *------------------------------------*/
+#stripe-form {
+    width: 40%;
+    margin-left: 30%;
+    padding: 3% 0;
+    margin-top: 2.5%;
+}
+
+.powered-by {
+    width: 40%;
+    margin-left: 30%;
+    text-align: right;
+}
+/*------------------------------------*
+	$EVENT FORM
+ *------------------------------------*/
+.event-line {
+    border: 3px solid var(--form-event);
+}
+
+.event-details {
+    border: 5px solid var(--form-event);
+    display: flex;
+}
+/*------------------------------------*
+	$RAFFLE FORM
+ *------------------------------------*/
+.raffle-line {
+    border: 3px solid var(--form-raffle);
+}
+
+.raffle-details {
+    border: 5px solid var(--form-raffle);
+    display: flex;
+}
+
+/*------------------------------------*
+	$SUBMIT
+ *------------------------------------*/
+.submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.submit button {
+    width: 30%;
+    border: none;
+    background-color: var(--font-green);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 25px;
+    padding: 3% 1%;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+/*------------------------------------*
+   $RESET MEDIA QUERY
+*------------------------------------*/
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

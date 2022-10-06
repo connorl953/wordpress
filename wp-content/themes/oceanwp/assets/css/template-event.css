@@ -1,0 +1,422 @@
+@charset "UTF-8";
+@keyframes dropdownBounceAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes leftBounceAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  80% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(20px);
+  }
+  60% {
+    transform: translateX(10px);
+  }
+}
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg) scale(2);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(360deg) scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+    opacity: 1;
+  }
+}
+body.page-template-event {
+  background-color: transparent;
+  background-image: linear-gradient(180deg, rgba(111, 192, 226, 0.98) 0%, #fff67a 100%);
+  background-repeat: no-repeat;
+}
+body.page-template-event .fade-in {
+  opacity: 0;
+  transform: translateY(7rem);
+  -moz-transition: opacity 1.5s;
+  -webkit-transition: opacity 1.5s;
+  -o-transition: opacity 1.5s;
+  transition: all 500ms ease-out;
+}
+body.page-template-event .fly-in-left {
+  opacity: 0;
+  transform: translateX(10rem);
+  transition: 500ms all ease-out;
+}
+body.page-template-event .blue-list {
+  list-style: none;
+}
+body.page-template-event .blue-list li::before {
+  content: "•";
+  color: #0099cc;
+  font-weight: bold;
+  display: inline-block;
+  transform: scale(1.1);
+  margin-right: 1em;
+}
+body.page-template-event .blue {
+  color: #0099cc;
+}
+body.page-template-event .dollar-sign {
+  font-size: 2.6rem;
+}
+body.page-template-event .dollar-sign:hover {
+  background: linear-gradient(to bottom, #e6c47b 22%, #634f2c 24%, #cfc09f 26%, #cfc09f 27%, #e4c977 40%, #b1852d 78%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  position: relative;
+  text-transform: uppercase;
+  margin: 0;
+  font-weight: bold;
+}
+body.page-template-event .dollar-sign:hover:after {
+  background: none;
+  content: "";
+  left: 0;
+  top: 0;
+  z-index: -1;
+  position: absolute;
+  text-shadow: -1px 0 1px #c6bb9f, 0 1px 1px #c6bb9f, 5px 5px 10px rgba(0, 0, 0, 0.4), -5px -5px 10px rgba(0, 0, 0, 0.4);
+}
+body.page-template-event .text-container {
+  color: #333;
+  display: inline-block;
+  padding: 15px;
+  background-color: white;
+  border: 2px solid black;
+  font-weight: bold;
+  border-radius: 10px;
+}
+body.page-template-event .bird {
+  left: 25%;
+  position: relative;
+}
+body.page-template-event .bird h1 {
+  position: absolute;
+  left: 16%;
+  bottom: 9%;
+}
+body.page-template-event .aardvark {
+  margin-top: 3rem;
+  position: relative;
+}
+body.page-template-event .aardvark img {
+  max-width: 30%;
+  width: 20%;
+}
+body.page-template-event .aardvark h1 {
+  padding: 1rem 2.5rem;
+  font-size: 3.5rem;
+  margin-left: 2rem;
+}
+body.page-template-event .aardvark .aardvark-timings {
+  position: absolute;
+  bottom: -40%;
+  max-height: max-content;
+}
+body.page-template-event .coins img {
+  margin-top: -10%;
+  margin-left: 10%;
+  width: 70%;
+}
+body.page-template-event .peacock {
+  padding: 5rem 5rem;
+  display: block;
+}
+body.page-template-event .peacock img {
+  max-width: 30%;
+  top: -350%;
+  right: -5%;
+  float: right;
+}
+body.page-template-event .peacock h1 {
+  float: right;
+}
+body.page-template-event .beaver .text-wrapper h1 {
+  display: inline-block;
+}
+body.page-template-event .beaver img {
+  max-width: 220px;
+}
+body.page-template-event .beaver .beaver-list-container {
+  font-weight: bold;
+  font-size: 2rem;
+  padding: 1.3rem 2.5rem;
+  line-height: 1.3;
+}
+body.page-template-event .beaver .beaver-list-container h1 {
+  font-weight: bold;
+}
+body.page-template-event .beaver .beaver-list-container p {
+  text-align: center;
+  font-size: 2.3rem;
+}
+body.page-template-event .beaver .text-container ul {
+  line-height: 1.4;
+  font-size: 2.3rem;
+}
+body.page-template-event .btn {
+  color: white;
+  font-size: 3.6rem;
+  border-radius: 50%;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 10px 25px 10px -10px rgba(0, 0, 0, 0.109);
+  transform: translate(0);
+  transform: scale(1);
+  transition: all 200ms ease-in;
+}
+body.page-template-event a:hover {
+  transform: translateY(-10px);
+  box-shadow: 15px 40px 10px -5px rgba(0, 0, 0, 0.109);
+}
+body.page-template-event .student-registration:hover {
+  color: #3dc2ee;
+  background-color: white;
+}
+body.page-template-event .sponsor-btn:hover {
+  color: #0099cc;
+  background-color: white;
+}
+body.page-template-event .student-registration {
+  background-color: #3dc2ee;
+  padding: 2em 2.7em;
+  line-height: 0.7em;
+}
+body.page-template-event .sponsor-btn {
+  background-color: #0099cc;
+  padding: 2.3em 1em;
+  line-height: 1em;
+}
+body.page-template-event .students-register-here {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+body.page-template-event .students-register-here img {
+  max-width: 70%;
+}
+body.page-template-event .information {
+  text-align: center;
+}
+body.page-template-event .information img {
+  max-width: 70%;
+}
+body.page-template-event .information h1 {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: unset;
+}
+body.page-template-event .information h1.heading {
+  background-color: unset;
+  border: unset;
+}
+body.page-template-event .information h2 {
+  font-weight: bold;
+}
+body.page-template-event .information i {
+  margin-top: 2rem;
+  font-size: 50px;
+  color: #3dc2ee;
+  animation: dropdownBounceAnimation 2s infinite;
+  display: block;
+  cursor: pointer;
+}
+body.page-template-event .information .page-dropdown ul {
+  text-align: left;
+}
+body.page-template-event .information .page-dropdown {
+  line-height: 1.4;
+  margin: 2rem 0;
+  border: none;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  transition: all 300ms linear;
+  font-size: 2.4rem;
+}
+body.page-template-event .information .page-dropdown:hover {
+  transform: translateY(-3px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+body.page-template-event .information > div {
+  margin-top: 7rem;
+}
+body.page-template-event .call-to-action {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 2em;
+}
+body.page-template-event .our-event-partners .text-container a p {
+  clear: both;
+  display: inline-block;
+}
+body.page-template-event .our-event-partners .text-container .desktop .column {
+  float: left;
+  margin-bottom: 20px;
+  max-width: 200px;
+}
+body.page-template-event .our-event-partners .text-container .desktop .column img {
+  display: block;
+  min-width: 100%;
+  padding: 5px;
+  opacity: 0;
+  animation: rotateAnimation 0.4s linear 1 forwards;
+}
+body.page-template-event .our-event-partners .text-container .desktop .column img:hover {
+  animation-fill-mode: none;
+  transform: scale(1.5);
+  opacity: 1;
+}
+body.page-template-event .our-event-partners .text-container a p i {
+  animation: leftBounceAnimation 2s infinite;
+  font-size: 40px;
+  display: inline-block;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 0;
+  top: 8px;
+}
+body.page-template-event .our-event-partners .text-container .mobile {
+  display: none;
+}
+body.page-template-event .our-event-partners .text-container .title {
+  color: #3dc2ee;
+  font-size: 30px;
+}
+@media (max-width: 700px) {
+  body.page-template-event .call-to-action {
+    flex-direction: column;
+  }
+  body.page-template-event .call-to-action .sponsor-btn {
+    margin-top: 2em;
+  }
+}
+@media (max-width: 820px) {
+  body.page-template-event .students-register-here a {
+    font-size: 2.7rem;
+    padding: 1.7em 2em;
+  }
+  body.page-template-event .our-event-partners .text-container .desktop .column img:hover {
+    transform: none;
+  }
+}
+@media (max-width: 500px) {
+  body.page-template-event .our-event-partners .text-container .desktop {
+    display: none;
+  }
+  body.page-template-event .our-event-partners .text-container .mobile {
+    display: inline-block;
+  }
+  body.page-template-event .our-event-partners .text-container .mobile .column {
+    float: left;
+    max-width: 33%;
+  }
+  body.page-template-event .our-event-partners .text-container .mobile .column img {
+    display: block;
+    min-width: 100%;
+    padding: 3px;
+    animation: rotateAnimation 0.4s linear;
+    animation-iteration-count: 1;
+  }
+  body.page-template-event .our-event-partners .text-container a p {
+    font-size: 15px;
+    margin: 0;
+  }
+  body.page-template-event .our-event-partners .text-container .mobile a p i {
+    font-size: 20px;
+    top: 2px;
+  }
+  body.page-template-event .our-event-partners .text-container .title {
+    font-size: 20px;
+  }
+  body.page-template-event .bird {
+    position: relative;
+    left: unset;
+    margin-top: 20px;
+    display: flex;
+  }
+  body.page-template-event .bird img {
+    width: 20%;
+    height: 20%;
+  }
+  body.page-template-event .bird h1 {
+    display: block;
+    width: 80%;
+    position: unset;
+    left: unset;
+    bottom: unset;
+  }
+  body.page-template-event .peacock {
+    position: relative;
+    padding: 0rem 5rem;
+  }
+  body.page-template-event .peacock h1 {
+    display: block;
+  }
+  body.page-template-event .peacock img {
+    position: unset;
+    top: unset;
+    right: unset;
+    float: right;
+    max-width: 50%;
+  }
+  body.page-template-event .students-register-here {
+    flex-direction: column;
+  }
+  body.page-template-event .students-register-here img {
+    max-width: 80%;
+  }
+  body.page-template-event .students-register-here a {
+    font-size: 3.6rem;
+    margin-top: 2em;
+    padding: 1.8em 2.4em;
+  }
+  body.page-template-event .students-register-here .arm1 {
+    transform: rotate(90deg);
+  }
+  body.page-template-event .students-register-here .arm2 {
+    transform: rotate(90deg);
+    margin-top: 2em;
+  }
+  body.page-template-event .call-to-action img {
+    max-width: 95%;
+  }
+}

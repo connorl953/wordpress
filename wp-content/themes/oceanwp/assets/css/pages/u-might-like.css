@@ -1,0 +1,113 @@
+.archive-u-might-like .container .row {
+    text-align: center;
+}
+
+.archive-u-might-like .container .years {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 500px;
+}
+
+.archive-u-might-like .container .years .year {
+    display: inline-block;
+    margin: 80px 0 0 0;
+    width: 100%;
+    text-align: center
+}
+
+.archive-u-might-like .container .years .year input {
+    display: none;
+}
+
+.archive-u-might-like .container .years .year label {
+    display: block;
+    margin: 0 auto;
+    padding: 19% 0 0 0;
+    width: 100%;
+    max-width: 500px;
+    cursor: pointer;
+}
+
+.archive-u-might-like .container .years .year label[for="year-2022"] {
+    background: url('./../../../../../../uploads/btn-2022.png') no-repeat center center/cover;
+}
+
+.archive-u-might-like .container .years .year label[for="year-2021"] {
+    background: url('./../../../../../../uploads/btn-2021.png') no-repeat center center/cover;
+}
+
+.archive-u-might-like .container .years .year label[for="year-2020"] {
+    background: url('./../../../../../../uploads/btn-2020.png') no-repeat center center/cover;
+}
+
+.archive-u-might-like .container .years .year label[for="year-2019"] {
+    background: url('./../../../../../../uploads/btn-2019.png') no-repeat center center/cover;
+}
+
+.archive-u-might-like .container .years .year label[for="year-2018"] {
+    background: url('./../../../../../../uploads/btn-2018.png') no-repeat center center/cover;
+}
+
+.archive-u-might-like .container .years .year .results {
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: -5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.archive-u-might-like .container .years .year ul {
+    display: none;
+    margin: -5px 0 0 0;
+    padding: 0;
+    width: 100%;
+    max-width: 435px;
+    float: right;
+    background: #FFF;
+    list-style-type: none;
+    border: 1px solid #ddd
+}
+
+.archive-u-might-like .container .years .year ul li {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    border-bottom: 1px solid #ddd
+}
+
+.archive-u-might-like .container .years .year ul li a {
+    display: inline-block;
+    width: 100%;
+    padding: 4px 0 4px 0;
+    font-size: 16px;
+    color: #000;
+    text-transform: capitalize;
+    float: left;
+}
+
+.archive-u-might-like .container .years .year ul li:hover a {
+    background: #efefef
+}
+
+.archive-u-might-like .container .years .year input:checked~ul {
+    display: inline-block;
+}
+
+.archive-u-might-like .col.items {
+    padding-top: 40px;
+    text-align: center;
+}
+
+.archive-u-might-like .col.items ul {
+    list-style-type: none;
+}
+
+.archive-u-might-like .col.items ul li {
+    margin: 10px 0 10px;
+    text-align: center;
+}
+
+.archive-u-might-like .col.items ul li a {
+    font-size: 20px;
+}

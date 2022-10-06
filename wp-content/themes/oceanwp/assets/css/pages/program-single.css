@@ -1,0 +1,66 @@
+.single-programs .arm-details .container .row .col {
+    position: relative;
+}
+
+.single-programs .arm-details .container .row .col .add-btn {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 40%;
+    text-align: center;
+    float: right;
+}
+
+.single-programs .arm-details .container .row .col .has-subtitle+.add-btn {
+    top: 100px;
+}
+
+.single-programs .arm-details .container .row .col .add-btn a {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 20px 10px 20px;
+    color: #FFF;
+    background: #0D868D;
+    float: right;
+    border-radius: 25px 25px;
+}
+
+.single-programs .arm-details .container .row .col .add-btn a.disabled {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 20px 10px 20px;
+    color: #FFF;
+    background: #5daeed;
+    cursor: default;
+    float: right;
+    border-radius: 25px 25px;
+}
+
+.single-programs .arm-details .container .row .col .add-btn:after {
+    position: absolute;
+    top: 0;
+    right: -70px;
+    display: block;
+    width: 70px;
+    height: 40px;
+    background: url('./../../../img/bg-add-favs.png') no-repeat center left/contain;
+    content: '';
+}
+
+.single-programs .arm-details .container .row .col .icon {
+    position: relative;
+    margin: 0 0 60px 0;
+    display: inline-block;
+    width: 100%;
+    max-width: 214px;
+    height: 160px;
+    background: url('./../../../img/bg-programs.png') no-repeat center center/cover;
+}
+
+.single-programs .arm-details .container .row .col .icon .logo {
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    width: 75px;
+    height: 75px;
+}

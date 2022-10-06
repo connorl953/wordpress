@@ -1,0 +1,95 @@
+@import url('https://use.fontawesome.com/releases/v5.7.0/css/all.css');
+
+.form-field, .form-field .form-label, .form-field .form-input {width:100%;}
+.form-field {margin:20px 0 0 0;}
+.form-field .form-label {margin:0 0 5px 0;}
+.form-field .form-input {position:relative;margin:5px 0 20px 0;}
+.form-field .form-input:last-child {margin:0;}
+.form-field .form-input select {width:100%;}
+.form-field .form-input textarea {min-height:80px;}
+.form-field .form-input input, .form-field .form-input textarea, .form-field .form-input select {width:100%;}
+.form-field .form-input input[type="checkbox"] {width:auto;}
+.form-field .form-input .wp-editor-wrap {max-width:800px}
+.admin-container .form-field .form-input textarea {max-width:600px;}
+div.profile {position:relative;display:inline-block;margin:0 10px 0 0;width:120px;height:120px;border:1px solid #ddd;background:#FFF;}
+div.profile i {display:none;position:absolute;top:-6px;right:-6px;padding:6px;font-size:12px;color:#FFF;background:#000;cursor:pointer;}
+div.profile[data-add="1"]:hover i {display:block;}
+p.submit {display:inline-block;}
+form[name="post"] input[value="post"] ~ #poststuff #butterbean-ui-oceanwp_mb_settings {display:none;}
+
+.hours-used {display:inline-block;width:100%;float:left;}
+.hours-used .table {margin:10px 0 10px 0;display:block;width:100%;max-width:700px;}
+.hours-used .table .labels {width:100%;}
+.hours-used .table .labels * {box-sizing:border-box;}
+.hours-used .table .labels ul {display:inline-block;width:100%;padding:0;margin:0;background:#0085ba;}
+.hours-used .table .labels ul li {padding:0;margin:0;width:20%;font-weight:bold;color:#FFF;text-align:center;float:left;}
+.hours-used .table .labels ul li:last-child {width:40%;float:left;}
+.hours-used .table .items {width:100%;}
+.hours-used .table .items ul {display:inline-block;width:100%;padding:0;margin:0;background:#FFF;border-bottom:1px solid #ccc;float:left;}
+.hours-used .table .items ul li {position:relative;padding:5px;margin:0;width:20%;color:#000;text-align:center;float:left;box-sizing:border-box;}
+.hours-used .table .items ul li:last-child {width:40%;float:left;}
+.hours-used .table .items ul li i {position:absolute;top:4px;right:-22px;font-size:16px;color:#0085ba;cursor:pointer;}
+.hours-used .table .items ul li i.fa-times {right:-40px;color:#F00;font-size:18px;}
+.hours-used .table .items.loading:before {display:block;margin:0 0 10px 0;padding:5px;width:100%;font-size:12px;text-align:center;float:left;background:#FFF;content:'Loading...';box-sizing:border-box;}
+.hours-used .table .items.empty:before {display:block;margin:0 0 10px 0;padding:5px;width:100%;font-size:12px;text-align:center;float:left;background:#FFF;content:'No records.';box-sizing:border-box;}
+.hours-used .table .pagination {display:inline-block;margin:0;width:100%;float:left;}
+.hours-used .table .pagination ul {margin:10px 0 0 0;float:right;}
+.hours-used .table .pagination ul li {display:inline-block;margin:0 0 0 10px;width:20px;height:20px;line-height:20px;text-align:center;float:left;background:#fff;border:1px solid #ccc;cursor:pointer;}
+.hours-used .table .pagination ul li.active {color:#FFF;background:#0085ba;}
+
+.payment-list {display:inline-block;width:100%;float:left;}
+.payment-list .payment-header {position:relative;display:block;width:100%;max-width:700px;}
+.payment-list .payment-header a {position:absolute;top:4px;right:0;}
+.payment-list .table {margin:10px 0 10px 0;display:block;width:100%;max-width:700px;}
+.payment-list .table .labels {width:100%;}
+.payment-list .table .labels * {box-sizing:border-box;}
+.payment-list .table .labels ul {display:inline-block;width:100%;padding:0;margin:0;background:#0085ba;}
+.payment-list .table .labels ul li {position:relative;padding:0;margin:0;width:15%;font-weight:bold;color:#FFF;text-align:center;float:left;}
+.payment-list .table .labels ul li:last-child {width:40%;float:left;}
+.payment-list .table .items {width:100%;}
+.payment-list .table .items ul {display:inline-block;width:100%;padding:0;margin:0;background:#FFF;border-bottom:1px solid #ccc;float:left;}
+.payment-list .table .items ul li {position:relative;padding:5px;margin:0;width:15%;color:#000;text-align:center;float:left;box-sizing:border-box;}
+.payment-list .table .items ul li:last-child {width:40%;float:left;}
+.payment-list .table .items ul li i {position:absolute;top:2px;right:-28px;font-size:20px;color:#0085ba;cursor:pointer;}
+.payment-list .table .items ul li i.fa-times {right:-48px;color:#F00;}
+.payment-list .table .items.loading:before {display:block;margin:0 0 10px 0;padding:5px;width:100%;font-size:12px;text-align:center;float:left;background:#FFF;content:'Loading...';box-sizing:border-box;}
+.payment-list .table .items.empty:before {display:block;margin:0 0 10px 0;padding:5px;width:100%;font-size:12px;text-align:center;float:left;background:#FFF;content:'No records.';box-sizing:border-box;}
+.payment-list .table .pagination {display:inline-block;margin:0;width:100%;float:left;}
+.payment-list .table .pagination ul {margin:10px 0 0 0;float:right;}
+.payment-list .table .pagination ul li {display:inline-block;margin:0 0 0 10px;width:20px;height:20px;line-height:20px;text-align:center;float:left;background:#fff;border:1px solid #ccc;cursor:pointer;}
+.payment-list .table .pagination ul li.active {color:#FFF;background:#0085ba;}
+
+.favourites-list {display:inline-block;width:100%;float:left;}
+.favourites-list .favourites-header {position:relative;display:block;width:100%;max-width:700px;}
+.favouritesfavourites-list .favourites-header a {position:absolute;top:4px;right:0;}
+.favourites-list .table {margin:10px 0 10px 0;display:block;width:100%;max-width:700px;}
+.favourites-list .table .labels {width:100%;}
+.favourites-list .table .labels * {box-sizing:border-box;}
+.favourites-list .table .labels ul {display:inline-block;width:100%;padding:0;margin:0;background:#0085ba;}
+.favourites-list .table .labels ul li {position:relative;padding:5px;margin:0;width:25%;font-weight:bold;color:#FFF;text-align:left;float:left;}
+.favourites-list .table .labels ul li:last-child {width:50%;}
+.favourites-list .table .items {width:100%;}
+.favourites-list .table .items ul {display:inline-block;width:100%;padding:0;margin:0;background:#FFF;border-bottom:1px solid #ccc;float:left;}
+.favourites-list .table .items ul li {position:relative;padding:5px;margin:0;width:25%;font-size:11px;color:#000;text-align:left;float:left;box-sizing:border-box;}
+.favourites-list .table .items ul li:last-child {width:50%;}
+
+.form-field.image span {display:block;margin:0 0 5px 0;width:120px;height:120px;background:#FFF;border:1px solid #ddd;}
+
+.modal {display:none;position:fixed;top:0;left:0;bottom:0;right:0;width:100%;height:100%;text-align:center;background:rgba(0,0,0,0.75);z-index:9999;}
+.modal .row {display:table-cell;margin-left:0;margin-right:0;text-align:center;vertical-align:middle;opacity:0;-webkit-transition:all 0.25s ease-in-out;-moz-transition:all 0.25s ease-in-out;-o-transition:all 0.25s ease-in-out;transition:all 0.25s ease-in-out;}
+.modal .row * {box-sizing:border-box;}
+.modal .row .content {position:relative;margin:0 auto;padding:20px;max-width:500px;background:#FFF;}
+.modal .row .content strong {font-size:24px;}
+.modal .row .content i {position:absolute;top:-12px;right:-12px;width:24px;height:24px;color:#FFF;line-height:24px;background:#000;border-radius:12px 12px;cursor:pointer;}
+.modal .row .content fieldset {display:inline-block;padding:0 20px 0 20px;width:100%;margin:0 0 10px 0;text-align:left;}
+.modal .row .content fieldset label {width:100%;margin:0 0 5px 0;}
+.modal .row .content fieldset input[type="number"], .modal .row .content fieldset input[type="date"], .modal .row .content fieldset textarea {width:100%;background:#efefef;border:1px solid #ccc;}
+.modal .row .content fieldset input[type="number"].invalid, .modal .row .content fieldset input[type="date"].invalid, .modal .row .content fieldset textarea.invalid {border:1px solid #F00;}
+.modal .row .content fieldset:last-child {margin:10px 0 0 0;text-align:center;}
+.modal .row .content fieldset.radio {text-align:left;vertical-align:top;}
+.modal .row .content fieldset.radio input {display:none}
+.modal .row .content fieldset.radio label {position:relative;padding:0 0 0 30px;margin:0 40px 0 0;width:auto;line-height:20px;float:left;vertical-align:top;}
+.modal .row .content fieldset.radio label:before {position:absolute;top:0;left:0;display:inline-block;margin:0 10px 0 0;width:20px;height:20px;background:#efefef;border:1px solid #ccc;content:'';}
+.modal .row .content fieldset.radio input:checked + label:before {background:#0085ba;}
+.modal.open {display:table;}
+.modal.open .row {opacity:1;}

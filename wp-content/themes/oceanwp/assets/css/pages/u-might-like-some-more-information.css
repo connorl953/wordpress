@@ -1,0 +1,109 @@
+/* ----- custom forms ----- */
+form[name="custom"] {
+  width: 100%;
+  display: inline-block;
+}
+
+form[name="custom"] fieldset {
+  display: inline-block;
+  margin: 0 0 20px 0;
+  width: 100%;
+  float: left;
+}
+
+form[name="custom student"] fieldset:nth-child(3),
+form[name="custom student"] fieldset:nth-child(2) {
+  width: 48%;
+  float: left;
+}
+
+form[name="custom student"] fieldset:nth-child(3) {
+  float: right;
+}
+
+form[name="custom"] fieldset span {
+  display: block;
+  width: 100%;
+  color: #000;
+}
+
+form[name="custom"] fieldset input[type="checkbox"],
+form[name="custom"] fieldset input[type="radio"] {
+  display: none
+}
+
+form[name="custom"] fieldset label {
+  display: inline-block;
+  width: 100%;
+  margin: 10px 0 0 0;
+  line-height: 20px;
+  color: #000;
+}
+
+form[name="custom"] fieldset label:before {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  content: '';
+  float: left;
+}
+
+form[name="custom"] fieldset input[type="checkbox"]:checked+label:before,
+form[name="custom"] fieldset input[type="radio"]:checked+label:before {
+  background: #72cae5;
+}
+
+form[name="custom"] fieldset label:last-child {
+  margin: 0;
+}
+
+form[name="custom"] fieldset.half {
+  width: 48%;
+}
+
+form[name="custom"] fieldset.half.right {
+  float: right;
+}
+
+form[name="custom"] fieldset #stripe-form {
+  margin: 10px 0 0 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+form[name="custom"] input[type="number"] {
+  width: 100%;
+  max-width: 100%;
+}
+
+form[name="custom"] fieldset input[name="donation_amount"] {
+  display: none;
+  margin: 10px 0 0 0;
+}
+
+form[name="custom"] fieldset input[id="contribution_other"]:checked~input[name="donation_amount"] {
+  display: block;
+}
+
+form[name="custom"] fieldset.cc-details {
+  display: none;
+  margin: -35px 0 20px 0;
+}
+
+form[name="custom"] fieldset p.powered {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+form[name="custom"] fieldset p.powered i {
+  font-size: 24px;
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+}
+
+form[name="custom"] fieldset button {
+  color: #000;
+}

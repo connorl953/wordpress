@@ -1,0 +1,366 @@
+.donate {
+    background: url('/wp-content/uploads/bg-donate-scaled.jpg') no-repeat center center;
+    background-position: center 240px;
+    background-size: 1400px auto;
+}
+
+.donate .container .row {
+    display: inline-block;
+}
+
+.donate .container .row .col-12:first-child {
+    margin-bottom: 150px;
+}
+
+.donate .container .row .col-12 .the-content {
+    width: 100%;
+}
+
+.donate .container .row .col-12 .the-content h1,
+.donate .container .row .col-12 .the-content h2,
+.donate .container .row .col-12 .the-content h3,
+.donate .container .row .col-12 .the-content h4,
+.donate .container .row .col-12 .the-content h5 {
+    font-style: italic;
+    color: #68c7ff;
+    margin-left: -20px
+}
+
+.donate .container .row .col-12 .the-content h2 {
+    color: #9b9b97;
+}
+
+.donate .container .row .col-12 .the-content h2 span {
+    color: #68c7ff;
+}
+
+.donate .container .row .col-12 .the-content:last-child {
+    padding: 0 0 20px 0;
+    margin-top: 50px;
+    background: url('./../../../img/bg-yellow-circle.jpg') no-repeat bottom right;
+    background-size: 150px auto
+}
+
+.donate .container .row .col-12 .the-content:last-child p strong {
+    color: #68c7ff;
+}
+
+.donate .container .row .col-12 .the-content:last-child p:last-child {
+    margin: 0 0 40px 0;
+    font-size: 20px;
+}
+
+.donate .container .row .col-lg-8 {
+    width: 70%;
+    float: left;
+}
+
+.donate .container .row .col-12 .the-content p {
+    font-size: 16px;
+}
+
+.donate .container .row .col-12 .the-content p strong {
+    font-style: italic;
+    font-weight: 900
+}
+
+.donate .container .row .col-12 .features {
+    width: 100%;
+}
+
+.donate .container .row .col-12 .features:before {
+    display: inline-block;
+    margin: 20px 0 20px 0;
+    width: 100%;
+    height: 130px;
+    background: url('./../../../img/free-database.jpg') no-repeat center top;
+    background-size: auto 100%;
+    content: '';
+}
+
+.donate .container .row .col-12 .features .type-row {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.donate .container .row .col-12 .features .type-row:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 160px;
+    background: #fffdc2;
+    content: '';
+    border-radius: 20px 20px
+}
+
+.donate .container .row .col-12 .features .type-row .type {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0 20px 0;
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-thumbs {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-thumbs:before {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    margin: 0 0 0 -108px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background: #cecece;
+    content: '';
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-thumbs .thumb {
+    position: relative;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background: #f1f1f1;
+    cursor: pointer;
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-thumbs .thumb img {
+    display: none;
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-thumbs .arrow {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-thumbs .arrow.left {
+    left: 50%;
+    margin-left: -160px
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-thumbs .arrow.left:before {
+    color: #cecece;
+    font: var(--fa-font-solid);
+    font-size: 50px;
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    text-rendering: auto;
+    line-height: 1;
+    content: "\f104";
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-thumbs .arrow.right {
+    right: 50%;
+    margin-right: -150px
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-thumbs .arrow.right:before {
+    color: #cecece;
+    font: var(--fa-font-solid);
+    font-size: 50px;
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    text-rendering: auto;
+    line-height: 1;
+    content: "\f105";
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-details {
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 200px;
+    text-align: left;
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-details:before {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: -42px;
+    width: 30px;
+    height: 30px;
+    background: url('./../../../img/bg-features-title.jpg') no-repeat center center/cover;
+    content: '';
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-details strong {
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+    color: #60c4ff;
+}
+
+.donate .container .row .col-12 .features .type-row .type .type-details p {
+    margin: 0;
+    font-size: 16px;
+    color: #000;
+    line-height: 22px;
+}
+
+.donate-txt {
+    width: 100%;
+    min-height: 200px;
+    margin: 50px 0 50px 0;
+    padding: 40px 0 0 0;
+    text-align: center;
+    background: url('./../../../img/bg-yellow-circle.jpg') no-repeat center top;
+    background-size: 200px auto;
+}
+
+.donate-txt p {
+    margin: 0 auto;
+    max-width: 550px;
+    font-size: 20px !important;
+    font-weight: 600;
+    color: #68c7ff;
+}
+
+.donate .container .row .col-lg-4 {
+    position: sticky;
+    width: 28%;
+    float: right;
+}
+
+.donate .container .row .col-lg-4 .form {
+    position: sticky;
+    padding: 20px;
+    width: 100%;
+    float: right;
+    background: #fffc8f;
+}
+
+.donate .container .row .col-lg-4 .form strong {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    color: #68c7ff;
+    text-align: center;
+}
+
+.donate .container .row .col-lg-4 .form form {
+    margin: 0 0 0 0;
+    width: 100%;
+    float: left;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset {
+    margin: 10px 0 10px 0;
+    width: 100%;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset input[type="radio"] {
+    display: none;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset span {
+    display: inline-block;
+    padding: 0 1% 10px 1%;
+    width: 100%;
+    float: left;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset.amount label {
+    display: inline-block;
+    margin: 4px 1% 4px 1%;
+    width: 31.33%;
+    height: 65px;
+    line-height: 65px;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    background: #FFF;
+    float: left;
+    cursor: pointer;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset.amount label[for="amount-7"] {
+    font-size: 16px;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset.type {
+    text-align: center;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset.type label {
+    display: inline-block;
+    margin: 0;
+    width: 80px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 12px;
+    color: #000;
+    text-align: center;
+    background: #FFF;
+    cursor: pointer;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset input[type="radio"]:checked+label {
+    color: #FFF;
+    background: #68c7ff;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset input[type="number"] {
+    margin: 0 1% 0 1%;
+    width: 100% !important;
+    max-width: 98%;
+    padding: 10px;
+    font-size: 18px;
+    background: #FFF;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset button {
+    padding: 10px;
+    width: 100%;
+    font-size: 22px;
+    color: #FFF;
+    background: #68c7ff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset #stripe-form {
+    padding: 10px;
+    width: 100%;
+    background: #FFF
+}
+
+.donate .container .row .col-lg-4 .form form fieldset p {
+    margin: 4px 0 0 0;
+    text-align: right;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset.custom {
+    display: none;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset input[type="text"] {
+    margin: 0 0 10px 0;
+    width: 100% !important;
+    max-width: 100%;
+    padding: 5px;
+    font-size: 13px;
+    background: #FFF;
+}
+
+.donate .container .row .col-lg-4 .form form fieldset input[type="text"].invalid {
+    border: 1px solid #F00;
+}

@@ -1,0 +1,16 @@
+.single-post .left-column .post-content {
+    display: block;
+    width: 100%;
+    margin: 40px 0 0 0;
+}
+
+.single-post .left-column .post-content .post h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.single-post .left-column .post-content .post p {
+    margin: 20px 0 20px 0;
+    font-size: 16px;
+    color: #000;
+}

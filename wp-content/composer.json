@@ -1,0 +1,14 @@
+{
+    "name": "buildingu/wordpress",
+    "authors": [
+        {
+            "name": "buildingu"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.0",
+        "facebook/graph-sdk": "^5.7",
+        "ext-curl": "*",
+        "ext-json": "*"
+    }
+}

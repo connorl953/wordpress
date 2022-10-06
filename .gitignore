@@ -1,0 +1,110 @@
+### ArchLinuxPackages ###
+*.tar
+*.tar.*
+*.jar
+*.exe
+*.msi
+*.zip
+*.tgz
+*.log
+*.log.*
+*.sig
+
+pkg/
+src/
+
+### Linux ###
+
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+ ### macOS ###
+
+.DS_Store
+.AppleDouble
+.LSOverride
+# Icon must end with two \r
+Icon
+
+
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+### Windows ###
+
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msix
+*.msm
+*.msp
+*.lnk
+
+### PhpStorm+all ###
+
+.idea/
+*.iws
+out/
+.idea_modules/
+atlassian-ide-plugin.xml
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+### VisualStudioCode ###
+
+.vscode/*
+.history/
+.history
+*.vsix
+.ionide
+
+ ### WordPress ###
+
+/wp-admin/
+/wp-content/cache/
+/wp-content/ai1wm-backups/
+/wp-content/index.php
+/wp-content/vendor/
+/wp-content/plugins/
+/wp-content/languages
+/wp-content/themes/index.php
+/wp-content/upgrade/
+/wp-content/themes/oceanwp/vendor
+/wp-content/themes/oceanwp/woocommerce
+wp-content/themes/oceanwp/assets/credentials.json
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/default.php
+/wp-*.php
+/xmlrpc.php
+wp-config.php
+/wp-content/themes/twenty*/
+/wp-content/plugins/hello.php
+/wp-content/uploads/
+/.htaccess*
+*.save*
+/robots.txt
+/wp-content/themes/oceanwp/.env

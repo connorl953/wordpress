@@ -1,0 +1,7 @@
+.archive-listing .container .row .result .bubble {
+    display: table;
+    margin: 0 0 20px 0;
+    width: 150px;
+    height: 150px;
+    background: url('./../../../img/bg-bubble-programs.png') no-repeat center center;
+}

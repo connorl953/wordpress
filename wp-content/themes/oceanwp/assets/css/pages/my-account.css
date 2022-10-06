@@ -1,0 +1,525 @@
+.page-template-account .col-12.banner {
+  margin-bottom: 40px;
+}
+
+.page-template-account .section {
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+.page-template-account .section .section-title {
+  position: relative;
+  padding: 10px 20px 10px 60px;
+  width: 100%;
+  background: #699ebc;
+  cursor: pointer;
+}
+
+.page-template-account .section .section-title:before {
+  font-weight: 900;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  color: #FFF;
+  font: var(--fa-font-solid);
+  font-size: 25px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-rendering: auto;
+  line-height: 1;
+  content: "\2b";
+}
+
+.page-template-account .section.open .section-title:before {
+  content: '\f068';
+}
+
+.page-template-account .section .section-title strong {
+  width: 100%;
+  font-size: 20px;
+  color: #FFF;
+  text-transform: uppercase
+}
+
+.page-template-account .section .section-title i {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  font-size: 20px;
+  color: #FFF;
+}
+
+.page-template-account .section.open .section-content {
+  display: inline-block;
+}
+
+.page-template-account .section .section-content {
+  display: none;
+  width: 100%;
+  margin: 20px 0 0 0;
+}
+
+.page-template-account .section .section-content form fieldset textarea {
+  height: 80px;
+}
+
+.page-template-account .section .section-content form fieldset button {
+  padding: 10px 20px 10px 20px;
+  color: #FFF;
+  background: #699ebc;
+  cursor: pointer;
+  float: right;
+}
+
+.page-template-account .section .section-content strong {
+  display: block;
+  margin: 10px 0 0 0;
+  font-size: 22px;
+}
+
+.page-template-account .section .section-content ul {
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+  list-style-type: none;
+}
+
+.page-template-account .section .section-content ul li {
+  float: left;
+}
+
+.page-template-account .section .section-content ul li:first-child {
+  margin: 0 40px 0 0;
+}
+
+.page-template-account .section .section-content ul li:first-child img {
+  max-width: 205px;
+}
+
+.page-template-account .section .section-content ul li:last-child {
+  margin: 30px 0 0 0;
+}
+
+.page-template-account .section .section-content ul li p {
+  max-width: 450px;
+}
+
+.page-template-account .section .section-content .total,
+.page-template-account .section .section-content .used,
+.page-template-account .section .section-content .remaining,
+.page-template-account .section .section-content .buy {
+  width: 25%;
+  text-align: center;
+  float: left;
+}
+
+.page-template-account .section .section-content .total span,
+.page-template-account .section .section-content .used span,
+.page-template-account .section .section-content .remaining span,
+.page-template-account .section .section-content .buy span {
+  display: inline-block;
+  margin: 0 auto;
+  width: 205px;
+  height: 200px;
+  font-size: 80px;
+  color: #000;
+  line-height: 200px;
+  background: url('/wp-content/uploads/total-hours.jpg') no-repeat center center;
+  background-size: auto 100% !important;
+}
+
+.page-template-account .section .section-content .total p,
+.page-template-account .section .section-content .used p,
+.page-template-account .section .section-content .remaining p,
+.page-template-account .section .section-content .buy p {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.page-template-account .section .section-content .used span {
+  background: url('/wp-content/uploads/hours-used.jpg') no-repeat center center;
+}
+
+.page-template-account .section .section-content .remaining span {
+  background: url('/wp-content/uploads/hours-remaining.jpg') no-repeat center center;
+}
+
+.page-template-account .section .section-content .buy span {
+  cursor: pointer;
+  background: url('/wp-content/uploads/buy-hours.jpg') no-repeat center center;
+}
+
+#profile .section-content form fieldset.half {
+  width: 49%;
+  float: left;
+}
+
+#profile .section-content form fieldset.right {
+  float: right;
+}
+
+#profile .section-content form fieldset.three {
+  width: 33.33%;
+  float: left;
+}
+
+#profile .section-content form fieldset.three.small {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#profile .section-content form fieldset span {
+  display: block;
+  width: 100%;
+}
+
+#profile .section-content form fieldset div {
+  position: relative;
+  margin: 0 25px 0 0;
+  float: left;
+}
+
+#profile .section-content form fieldset div input[type="radio"],
+#profile .section-content form fieldset div input[type="text"] {
+  display: none;
+}
+
+#profile .section-content form fieldset div input[type="radio"]+label {
+  cursor: pointer;
+}
+
+#profile .section-content form fieldset div input[type="radio"]+label:before {
+  display: inline-block;
+  margin: 2px 8px 0 0;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px 10px;
+  float: left;
+  content: ''
+}
+
+#profile .section-content form fieldset div input[type="radio"]:checked+label:after {
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #13aff0;
+  border-radius: 10px 10px;
+  float: left;
+  content: ''
+}
+
+#profile .section-content form fieldset div input[type="radio"][value="Female"]:checked+label:after {
+  background: #f70356;
+}
+
+#profile .section-content form fieldset div input[type="radio"][value="Female"]:checked+label:before {
+  border: 1px solid #f70356;
+}
+
+#profile .section-content form fieldset div input[type="radio"][value="Male"]:checked+label:after {
+  background: #3e52b3;
+}
+
+#profile .section-content form fieldset div input[type="radio"][value="Male"]:checked+label:before {
+  border: 1px solid #3e52b3;
+}
+
+#profile .section-content form fieldset div input[type="radio"][value="Other"]:checked~input[type="text"] {
+  display: block
+}
+
+
+/* ARCHIVE LISTING */
+.archive-listing {
+  padding: 0 0 20px 0;
+  width: 100%;
+}
+
+.archive-listing .container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.archive-listing .container .row .col img {
+  width: 100%;
+}
+
+.archive-listing .container .row .col.filters,
+.archive-listing .container .row .col.browse {
+  float: left;
+}
+
+.archive-listing .container .row .col.filters,
+.archive-listing .container .row .col.browse {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.archive-listing .container .row .col.filters strong,
+.archive-listing .container .row .col.browse strong {
+  padding: 0 10px 0 0;
+  font-size: 20px;
+  color: #548194;
+  border-right: 4px solid #548194;
+}
+
+.archive-listing .container .row .col.filters {
+  width: auto;
+  float: right;
+}
+
+.archive-listing .container .row .col.filters ul {
+  list-style-type: none;
+}
+
+.archive-listing .container .row .col.filters ul li {
+  display: inline-block;
+  position: relative;
+  padding: 6px;
+  margin: 0 0 0 32px;
+  font-weight: 400;
+  font-size: 16px;
+  color: #548194;
+}
+
+.archive-listing .container .row .col.filters ul li:before {
+  margin: 0 5px 0 0;
+  color: #f1e913;
+  content: '>>';
+}
+
+.archive-listing .container .row .col.filters ul li ul {
+  display: none;
+  position: absolute;
+  right: 0;
+  width: 140px;
+  background: #FFF;
+  z-index: 2
+}
+
+.archive-listing .container .row .col.filters ul li ul li {
+  display: block;
+  padding: 2px 4px 2px 4px;
+  margin: 0;
+  font-size: 14px;
+  text-align: left;
+}
+
+.archive-listing .container .row .col.filters ul li ul li:before {
+  content: none;
+}
+
+.archive-listing .container .row .col.filters ul li ul li input[type="checkbox"] {
+  margin: 0px 5px 0 0 !important;
+  border-color: #f1e913;
+}
+
+.archive-listing .container .row .col.filters ul li ul.large {
+  width: 220px;
+}
+
+.archive-listing .container .row .col.filters ul li:hover {
+  background: #FFF
+}
+
+.archive-listing .container .row .col.filters ul li:hover ul {
+  display: block
+}
+
+.archive-listing .container .row .col.filters p span {
+  color: #548194;
+}
+
+.archive-listing .container .row .col.browse {
+  text-align: left;
+}
+
+.archive-listing .container .row .col.browse strong {
+  padding: 0 0 0 10px;
+  border-left: 4px solid #548194;
+  border-right: none;
+}
+
+.archive-listing .container .row .col.browse ul {
+  margin: 15px 0 0 0;
+  padding: 0;
+  list-style-type: none
+}
+
+.archive-listing .container .row .col.browse ul li {
+  margin: 0 14px 0 0;
+  float: left;
+}
+
+.archive-listing .container .row .col.browse ul li:before {
+  display: inline-block;
+  margin: 2px 2px 0 0;
+  width: 10px;
+  height: 10px;
+  background: #f1e913;
+  content: '';
+}
+
+.archive-listing .container .row .result {
+  display: inline-block;
+  margin: 20px 0 0 0;
+  width: 100%;
+}
+
+.archive-listing .container .row .result .heading {
+  margin: 0 0 15px 0;
+  padding: 0 0 6px 0;
+  width: 100%;
+  border-bottom: 2px solid #f1e913;
+}
+
+.archive-listing .container .row .result .heading span {
+  color: #548194;
+  font-size: 22px;
+}
+
+.archive-listing .container .row .result .heading span:before {
+  display: inline-block;
+  margin: 0 6px 0 0;
+  width: 20px;
+  height: 20px;
+  background: #f1e913;
+  content: '';
+}
+
+.archive-listing .container .row .result .heading b {
+  font-size: 20px;
+  color: #48cdff;
+  float: right;
+}
+
+.archive-listing .container .row .result .heading b a {
+  font-weight: bold
+}
+
+.archive-listing .container .row .result .bubble {
+  display: table;
+  margin: 0 0 20px 0;
+  width: 150px;
+  height: 150px;
+  background: url('./../../../img/bg-bubble-programs.png') no-repeat center center;
+}
+
+.archive-listing .container .row .result .bubble div {
+  position: relative;
+  display: table-cell;
+  padding: 0 14px 0 14px;
+  font-size: 15px;
+  vertical-align: middle;
+  color: #548194;
+  text-align: center;
+}
+
+.archive-listing .container .row .result .bubble div a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.archive-listing .container .row .result .bubble div:hover strong {
+  color: #548194;
+}
+
+.post-type-archive-opportunities .archive-listing .container .row .result .bubble div:hover strong,
+.post-type-archive-funding .archive-listing .container .row .result .bubble div:hover strong {
+  color: #666666;
+}
+
+.archive-listing .container .row .result .bubble div strong {
+  display: block;
+  line-height: 20px;
+}
+
+.archive-listing .container .row .result .bubble div:hover strong {
+  color: #13aff0;
+}
+
+.archive-listing .container .row .result .bubble div small {
+  display: block
+}
+
+.archive-listing .container .row .result .column {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  width: 150px;
+  float: left;
+}
+
+.archive-listing .container .row .result .column.padding {
+  padding-top: 75px
+}
+
+.page-template-account .archive-listing .container .row .result.funding .heading span:before {
+  background: #94c426;
+}
+
+.page-template-account .archive-listing .container .row .result.funding .heading {
+  border-bottom: 2px solid #94c426;
+}
+
+.page-template-account .archive-listing .container .row .result.funding .bubble {
+  background: url('./../../../img/bg-bubble-funding.png') no-repeat center center;
+}
+
+.page-template-account .archive-listing .container .row .result.funding .bubble div {
+  position: relative;
+  color: #FFF;
+}
+
+.page-template-account .archive-listing .container .row .result.opportunities .heading span:before {
+  background: #48cdff;
+}
+
+.page-template-account .archive-listing .container .row .result.opportunities .heading {
+  border-bottom: 2px solid #48cdff;
+}
+
+.page-template-account .archive-listing .container .row .result.opportunities .bubble {
+  background: url('./../../../img/bg-bubble-opportunities.png') no-repeat center center;
+}
+
+.page-template-account .archive-listing .container .row .result.opportunities .bubble div {
+  color: #FFF;
+}
+
+.page-template-account .archive-listing .container .row .result.opportunities .bubble div small {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.page-template-account .archive-listing .container .row .result .bubble div i {
+  display: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  color: white;
+  line-height: 28px;
+  background: red;
+  border-radius: 12px 12px;
+  cursor: pointer;
+}
+
+.page-template-account .archive-listing .container .row .result .bubble div:hover i {
+  display: block
+}

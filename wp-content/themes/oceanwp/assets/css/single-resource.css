@@ -1,0 +1,83 @@
+.arm-details {
+    width: 100%;
+}
+
+.arm-details .container {
+    max-width: 618px;
+    width: 100%;
+}
+
+.arm-details .container .row .col {
+    text-align: center;
+}
+
+.arm-details .container .row .col .title {
+    padding: 5px;
+    width: 100%;
+    background: #f1e913;
+}
+
+.arm-details .container .row .col .title h1 {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+}
+
+.arm-details .container .row .col .title h1 a {
+    color: rgb(84, 129, 148);
+    text-decoration: underline
+}
+
+.arm-details .container .row .col .title h1 a:hover {
+    color: #13aff0;
+}
+
+.arm-details .container .row .col .title p {
+    margin: 0;
+    font-size: 18px;
+    color: #707070;
+}
+
+.arm-details .container .row .col .content {
+    padding: 40px 0 40px 0;
+    width: 100%;
+    text-align: left;
+}
+
+.arm-details .container .row .col .content p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    color: #548194;
+}
+
+.arm-details .container .row .col .content p:first-child {
+    padding: 0 40% 0 0;
+}
+
+.arm-details .container .row .col .content p strong {
+    color: #000;
+}
+
+.arm-details .container .row .col .content p a {
+    text-decoration: underline;
+}
+
+.arm-details .container .row .col .back-btn {
+    width: 100%;
+    text-align: center;
+}
+
+.arm-details .container .row .col .back-btn a {
+    display: inline-block;
+    padding: 10px 20px 10px 20px;
+    color: #FFF;
+    background: #aaaaaa;
+}
+
+.arm-details .container .row .col .back-btn a i {
+    margin: 0 5px 0 0;
+}
+
+.arm-details .container .row .col .back-btn a:hover {
+    background: #7a7a7a;
+}
