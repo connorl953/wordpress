@@ -343,32 +343,52 @@ final class OCEANWP_Theme_Class {
 	 * @since   1.0.0
 	 */
 	public function process_contribute_form($args){
-		$postData = isset($_POST) ? $_POST : null;
+
+        require_once(__DIR__.'/vendor/autoload.php');
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+
+        $client = new GuzzleHttp\Client([
+            'timeout'  => 2.0,
+        ]);
+
+        $response = $client->request('POST', $_SERVER['HCAPTCHA_VERIFY_URL'], [
+            [
+                'json' => [
+                    'secret' => $_SERVER['HCAPTCHA_SECRET_KEY'],
+                    'response' => $_POST['h-captcha-response']
+                ]
+            ]
+        ]);
+        $response = $response->getBody()->getContents();
+        $response =json_decode($response,true);
+        $success = $response['success'];
+
+        if(!$success) {
+            $response['error'] = 'Please complete captcha!';
+            print(json_encode($response));
+            wp_die();
+        }
+
 		$response = ['success'=>true];
+        $paymentIntent = $_POST['payment_intent'] ?? null;
 
-		if($postData){
-			$paymentIntent = isset($postData['payment_intent']) ? $postData['payment_intent'] : null;
+        if(!$paymentIntent) {
+            $response['error'] = 'Missing payment information!';
+            print(json_encode($response));
+            wp_die();
+        }
 
-			if($paymentIntent){
-				require_once(__DIR__.'/vendor/autoload.php');
-
-	            \Stripe\Stripe::setApiKey(BUILDING_U_STRIPE_KEY_SECRET);
-
-	            try {
-	                $metaData = ['metadata'=>['user_id'=>$currentUser -> ID,'user_email'=>$postData['email']]]; 
-	                $intent = \Stripe\PaymentIntent::retrieve($postData['payment_intent']);
-	                $updateMetadata = \Stripe\PaymentIntent::update($postData['payment_intent'],$metaData);
-	                
-	                $response['success'] = true;
-	                $response['data'] = $intent;                    
-	            }catch(\Stripe\Error\Base $error){
-	                $response['error'] = $error -> getMessage();
-	            }
-			}else{
-				$response['error'] = 'Missing payment information!';
-			}
-		}
-
+        \Stripe\Stripe::setApiKey(BUILDING_U_STRIPE_KEY_SECRET);
+        try {
+            $metaData = ['metadata'=>['user_id'=>$currentUser -> ID,'user_email'=>$postData['email']]];
+            $intent = \Stripe\PaymentIntent::retrieve($postData['payment_intent']);
+            $updateMetadata = \Stripe\PaymentIntent::update($postData['payment_intent'],$metaData);
+            $response['success'] = true;
+            $response['data'] = $intent;
+        }catch(\Stripe\Error\Base $error){
+            $response['error'] = $error -> getMessage();
+        }
 		print(json_encode($response));
 		wp_die();
 	}
@@ -557,6 +577,9 @@ final class OCEANWP_Theme_Class {
 	public static function constants() {
 
 		$version = self::theme_version();
+        require_once( __DIR__ . '/../../vendor/autoload.php');
+        $dotenv = \Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
 
 		// Theme version
 		define( 'OCEANWP_THEME_VERSION', $version );
@@ -569,13 +592,9 @@ final class OCEANWP_Theme_Class {
 		define( 'OCEANWP_INC_DIR', OCEANWP_THEME_DIR .'/inc/' );
 		define( 'OCEANWP_INC_DIR_URI', OCEANWP_THEME_URI .'/inc/' );
 
-		// stripe live keys
-		define( 'BUILDING_U_STRIPE_KEY_PUBLIC', 'pk_live_CW63DxmeInyq8DinWKN6bmMh005NZl66X1');
-        define( 'BUILDING_U_STRIPE_KEY_SECRET', 'sk_live_VPJdtm1Cu8Sp9z6HkzXy0D3300pnsxQ2MZ');
-
-		// stripe test keys
-		//define( 'BUILDING_U_STRIPE_KEY_PUBLIC', 'pk_test_5A2paP2uCJ7PYlRLWZXOqGZv00sfNNPTPg');
-		//define( 'BUILDING_U_STRIPE_KEY_SECRET', 'sk_test_ADmO4uXEOBmwNZFFbLsnMduq00TDMSZrJD');
+		// stripe
+		define( 'BUILDING_U_STRIPE_KEY_PUBLIC', $_SERVER['STRIPE_KEY_PUBLIC']);
+        define( 'BUILDING_U_STRIPE_KEY_SECRET', $_SERVER['STRIPE_KEY_SECRET']);
 
 		// Check if plugins are active
 		define( 'OCEAN_EXTRA_ACTIVE', class_exists( 'Ocean_Extra' ) );
@@ -679,13 +698,13 @@ final class OCEANWP_Theme_Class {
 	 * @since   1.0.0
 	 */
 	public function process_business_donation(){
-		$amount = isset($_POST['amount']) ? $_POST['amount'] : null;
+		$amount = $_POST['amount'] ?? null;
 	    $response = ['success'=>false];
 	    
 	    if($amount){
-	    	require_once(__DIR__.'/vendor/autoload.php');
+            require_once( __DIR__ . '/../../vendor/autoload.php');
 
-	    	$paymentIntent = isset($_POST['secret']) ? $_POST['secret'] : null;
+	    	$paymentIntent = $_POST['secret'] ?? null;
 
 	    	\Stripe\Stripe::setApiKey(BUILDING_U_STRIPE_KEY_SECRET);
 
@@ -731,7 +750,7 @@ final class OCEANWP_Theme_Class {
             exit(json_encode($response));
         }
 
-        require_once( __DIR__ . '/vendor/autoload.php');
+        require_once( __DIR__ . '/../../vendor/autoload.php');
         \Stripe\Stripe::setApiKey(BUILDING_U_STRIPE_KEY_SECRET);
         try {
             $payment_intent = \Stripe\PaymentIntent::create([
@@ -758,7 +777,7 @@ final class OCEANWP_Theme_Class {
             $response['error_message'] = "No payment intent set";
             exit(json_encode($response));
         }
-        require_once( __DIR__ . '/vendor/autoload.php');
+        require_once( __DIR__ . '/../../vendor/autoload.php');
         \Stripe\Stripe::setApiKey(BUILDING_U_STRIPE_KEY_SECRET);
         try {
             $metaData = ['metadata'=>['business_name'=>$_POST['businessName']]];
@@ -1242,7 +1261,7 @@ final class OCEANWP_Theme_Class {
 			}
 
 			if($validData){
-				require_once(__DIR__.'/vendor/autoload.php');
+                require_once( __DIR__ . '/../../vendor/autoload.php');
 
                 \Stripe\Stripe::setApiKey(BUILDING_U_STRIPE_KEY_SECRET);
 
@@ -1280,7 +1299,7 @@ final class OCEANWP_Theme_Class {
 		$response = isset($currentUser -> ID) ? ['success'=>false] : ['success'=>false,'error'=>'No user logged in!'];
 
 		if(isset($currentUser -> ID) && $hours){
-			require_once(__DIR__.'/vendor/autoload.php');
+            require_once( __DIR__ . '/../../vendor/autoload.php');
 
 			$country = get_user_meta($currentUser -> ID,'_user_country',true);
 			$currency = $country === 'USA' ? 'usd' : 'cad';

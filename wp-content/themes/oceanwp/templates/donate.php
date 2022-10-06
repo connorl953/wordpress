@@ -114,10 +114,13 @@ while(have_posts()):
 							<div id="stripe-form"></div>
 							<p>Powered By <i class="fab fa-cc-stripe"></i></p>
 						</fieldset>
+                        <div class="h-captcha" data-sitekey="4d71e4ba-6832-41c4-a837-eceb9bac93dd"></div>
 						<fieldset>
 							<input name="action" type="hidden" value="contribute_form" />
 							<button>Donate</button>
 						</fieldset>
+
+                        <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 					</form>
 				</div>
 			</div>	

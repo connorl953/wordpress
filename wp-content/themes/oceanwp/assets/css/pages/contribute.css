@@ -237,11 +237,12 @@
     position: sticky;
     width: 28%;
     float: right;
+    margin-top:15px;
 }
 
 .donate .container .row .col-lg-4 .form {
     position: sticky;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
     float: right;
     background: #fffc8f;
