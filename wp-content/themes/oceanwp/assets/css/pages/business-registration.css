@@ -773,6 +773,11 @@ input[type=text]:focus {
     font-size: 1.2em;
     cursor: pointer;
 }
+
+.h-captcha {
+    display: flex;
+    justify-content: center;
+}
 /*------------------------------------*
    $RESET MEDIA QUERY
 *------------------------------------*/
