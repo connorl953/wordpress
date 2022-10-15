@@ -373,6 +373,7 @@ $uploadsDir = wp_upload_dir()['baseurl'] . "/";
                 </div>
             </div>
             <hr class="base-line">
+            <div class="h-captcha" data-sitekey="4d71e4ba-6832-41c4-a837-eceb9bac93dd"></div>
             <div class="form-input submit">
                 <button id="btn-submit" data-stripe="false">
                     <span id="submit-main">Submit</span>
@@ -382,6 +383,7 @@ $uploadsDir = wp_upload_dir()['baseurl'] . "/";
                     </span>
                 </button>
             </div>
+            <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
         </form>
     </section>
 </div>
