@@ -9,6 +9,7 @@
 *.log
 *.log.*
 *.sig
+.vscode
 
 pkg/
 src/
