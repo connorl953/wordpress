@@ -12,7 +12,26 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	
+	<!-- CONTRIBUTE -->
+
 	<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      crossorigin="anonymous"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/contribute.css" />
+	
+	<!-- CONTRIBUTE -->
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<!--script async src="https://www.googletagmanager.com/gtag/js?id=UA-135776209-1"></script>
