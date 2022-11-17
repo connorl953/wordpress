@@ -2950,6 +2950,9 @@ final class OCEANWP_Theme_Class {
             case '/business-registration' :
                 wp_enqueue_script('business-registration', OCEANWP_JS_DIR_URI . '/pages/business-registration.js', false, OCEANWP_THEME_VERSION);
                 break;
+            case '/contribute' :
+                wp_enqueue_script('contribute', OCEANWP_JS_DIR_URI . '/pages/contribute.js', false, OCEANWP_THEME_VERSION);
+                break;
             default:
                 break;
         }
