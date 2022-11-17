@@ -439,8 +439,8 @@ while(have_posts()):
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     >
   </script>
-  /* Linking the contribute.js file to the html file. */
-  <script src="../assets/js/contribute.js"></script>
+  <!-- /* Linking the contribute.js file to the html file. */ -->
+  <!-- <script src="../assets/js/contribute.js"></script> -->
 
 <!-- NEW SCRIPTS -->
 
