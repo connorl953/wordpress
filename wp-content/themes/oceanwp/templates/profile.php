@@ -236,8 +236,16 @@
     </div>
 
 
-    <script src="libs/jquery/jquery.js"></script>
-     <script>
+    <!-- <script src="libs/jquery/jquery.js"></script> -->
+<!-- Changed from local to cdn jquery -->
+<script
+      crossorigin="anonymous"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    >
+</script>
+
+<script>
         $( document ).ready(function() {
             $("#profile-btn").on('click', () => {
                 $("#profile-section").toggleClass("hidden");
