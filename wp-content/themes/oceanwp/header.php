@@ -29,7 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/contribute.css" />
+    <link rel="stylesheet" href="./assets/css/contribute.css" />
 	
 	<!-- CONTRIBUTE -->
 
