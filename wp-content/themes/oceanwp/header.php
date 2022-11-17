@@ -12,7 +12,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-	
+
 	<!-- CONTRIBUTE -->
 
 	<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/contribute.css" />
+    <link rel="stylesheet" href="assets/css/contribute.css" />
 	
 	<!-- CONTRIBUTE -->
 
