@@ -2818,6 +2818,9 @@ final class OCEANWP_Theme_Class {
 			case '/contribute':
 					wp_enqueue_style( 'contribute', OCEANWP_CSS_DIR_URI .'/pages/contribute.css', false, OCEANWP_THEME_VERSION );
 					break;
+			case '/profile':
+					wp_enqueue_style( 'profile', OCEANWP_CSS_DIR_URI .'/pages/profile.css', false, OCEANWP_THEME_VERSION );
+					break;
 			case '/resources':	
 					wp_enqueue_style( 'resources', OCEANWP_CSS_DIR_URI .'/pages/resources.css', false, OCEANWP_THEME_VERSION );
 					break;
