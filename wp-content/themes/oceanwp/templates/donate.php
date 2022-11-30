@@ -5,7 +5,8 @@
 get_header();
 
 $attachment = wp_get_attachment_image_src(get_post_thumbnail_id($post -> ID),1200);
-	
+
+$https = isset($_SERVER['HTTPS']) ? "https://" : "http://";
 while(have_posts()):
     the_post(); 
 
@@ -192,7 +193,7 @@ while(have_posts()):
                         <span>2</span>
                       </div>
                       <p class="form-step-title">
-                        Choose an ammount of support
+                        Choose an amount of support
                       </p>
                     </div>
                     <div class="form-step-fields">
@@ -201,56 +202,55 @@ while(have_posts()):
                         role="group"
                         aria-label="preset ammounts"
                       >
-                        <button
-                          type="button"
-                          data-amount="10"
-                          class="btn preset-amount btn-outline-primary"
-                        >
-                          US$10
+
+
+                          <?php
+                          $prices = array(30, 40, 50, 60, 75, 100);
+
+                          foreach($prices as $value){
+
+                           echo
+                           "<button
+                          type=\"button\"
+                          onclick=\"window.location.href='".$https.$_SERVER['HTTP_HOST']."/contribute/?sel=".$value."'\"
+                           
+                          data-amount=\"".$value."\"
+                          class=\"btn preset-amount btn-outline-primary\"
+                          >
+                          US$".$value."
                         </button>
-                        <button
-                          type="button"
-                          data-amount="20"
-                          class="btn preset-amount btn-outline-primary"
-                        >
-                          US$20
-                        </button>
-                        <button
-                          type="button"
-                          data-amount="40"
-                          class="btn preset-amount btn-outline-primary"
-                        >
-                          US$40
-                        </button>
-                        <button
-                          type="button"
-                          data-amount="60"
-                          class="btn preset-amount btn-outline-primary"
-                        >
-                          US$60
-                        </button>
-                        <button
-                          type="button"
-                          data-amount="80"
-                          class="btn preset-amount btn-outline-primary"
-                        >
-                          US$80
-                        </button>
-                        <button
-                          type="button"
-                          data-amount="100"
-                          class="btn preset-amount btn-outline-primary"
-                        >
-                          US$100
-                        </button>
+                          ";
+                          }
+                          ?>
+
+                          <button
+                                  type="button"
+                                  onclick="window.location.href='<?php echo "http://".$_SERVER['HTTP_HOST']."/contribute/?sel=custom" ?>';"
+                                  data-amount=""
+                                  class="btn preset-amount btn-outline-primary"
+                          >
+                              Custom Amount
+                          </button>
+                          <div>
+                          <input type="checkbox" id="waiveUPoints" name="waiveUPoints" value="waiveUPoints">
+                          <label for="waiveUPoints"> Donate without "Thank U-Points"?</label><br>
+                          </div>
                       </div>
                       <!-- AMOUNT -->
                       <div class="form-input d-flex flex-column">
+                          <?php
+                          if($_GET['sel'] == "custom"){
+                              echo "";
+                          }
+                          ?>
+
                         <label for="amount" class="form-label"
-                          >Your support</label
+                          >Your support: <?php echo $_GET['sel'] == "custom" ? "Please enter custom amount below." : "$".$_GET['sel']?></label
                         >
+
                         <input
                           type="text"
+                          <?php echo $_GET['sel'] == "custom" ? "" : "hidden"?>
                           name="amount "
                           id="amount"
                           class="form-control"
